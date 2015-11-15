@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- 배경이미지 -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_login" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <!-- 회원가입 폼 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.45"
+            android:orientation="vertical">
+
+            <!-- 이름 입력 란 -->
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="30dp"
+                android:background="#ffffff"
+                android:drawableLeft="@drawable/ic_name"
+                android:drawablePadding="10dp"
+                android:hint="Name"
+                android:paddingLeft="10dp"
+                android:textColorHint="#a1a1a1"
+                android:textSize="15dp" />
+
+            <!-- 이메일 입력 란 -->
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:background="#ffffff"
+                android:drawableLeft="@drawable/ic_user"
+                android:drawablePadding="10dp"
+                android:hint="Email"
+                android:paddingLeft="10dp"
+                android:textColorHint="#a1a1a1"
+                android:textSize="15dp" />
+
+            <!-- 비밀번호 입력 란 -->
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:background="#ffffff"
+                android:drawableLeft="@drawable/ic_pw"
+                android:drawablePadding="10dp"
+                android:hint="Password"
+                android:paddingLeft="10dp"
+                android:textColorHint="#a1a1a1"
+                android:textSize="15dp" />
+
+            <!-- 가입하기 버튼 -->
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:background="#fc8585"
+                android:text="가입하기"
+                android:textColor="#ffffff" />
+        </LinearLayout>
+
+        <!-- 하단 여백 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.65">
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

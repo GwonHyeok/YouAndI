@@ -11,37 +11,6 @@
         android:scaleType="centerCrop"
         android:src="@drawable/bg_login" />
 
-    <!-- 하단 회원가입 부분 -->
-    <RelativeLayout
-        android:id="@+id/registerBtn"
-        android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:layout_alignParentBottom="true"
-        android:clickable="true"
-        android:gravity="center">
-
-        <!-- 회원가입 텍스트 -->
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:background="#59ffffff"
-            android:gravity="fill"
-            android:paddingLeft="34dp"
-            android:text="계정이 아직 없으신가요? 회원가입"
-            android:textColor="#ffffff" />
-
-        <!-- 회원가입 화살표 -->
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="30dp"
-            android:rotation="180"
-            android:src="@drawable/ic_arrow" />
-
-    </RelativeLayout>
-
     <!-- 화면 전체를 두개로 나눔 -->
     <LinearLayout
         android:layout_width="match_parent"
@@ -89,6 +58,7 @@
 
             <!-- 이메일 입력 -->
             <EditText
+                android:id="@+id/login_email_edittext"
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
                 android:layout_marginBottom="15dp"
@@ -98,12 +68,14 @@
                 android:drawableLeft="@drawable/ic_user"
                 android:drawablePadding="10dp"
                 android:hint="Email"
+                android:inputType="textEmailAddress"
                 android:paddingLeft="10dp"
                 android:textColorHint="#a1a1a1"
                 android:textSize="15dp" />
 
             <!-- 패스워드 입력 -->
             <EditText
+                android:id="@+id/login_pwd_edittext"
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
                 android:layout_marginBottom="15dp"
@@ -113,12 +85,14 @@
                 android:drawableLeft="@drawable/ic_pw"
                 android:drawablePadding="10dp"
                 android:hint="Password"
+                android:inputType="textPassword"
                 android:paddingLeft="10dp"
                 android:textColorHint="#a1a1a1"
                 android:textSize="15dp" />
 
             <!-- 로그인 버튼 -->
             <Button
+                android:id="@+id/login_signin_button"
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
                 android:layout_marginBottom="30dp"
@@ -127,11 +101,37 @@
                 android:background="#fc8585"
                 android:text="로그인"
                 android:textColor="#ffffff" />
-
         </LinearLayout>
-
-
     </LinearLayout>
 
+    <!-- 하단 회원가입 부분 -->
+    <RelativeLayout
+        android:id="@+id/login_signup_button"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:gravity="center">
 
+        <!-- 회원가입 텍스트 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="#59ffffff"
+            android:gravity="fill"
+            android:paddingLeft="34dp"
+            android:text="계정이 아직 없으신가요? 회원가입"
+            android:textColor="#ffffff" />
+
+        <!-- 회원가입 화살표 -->
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="30dp"
+            android:rotation="180"
+            android:src="@drawable/ic_arrow" />
+    </RelativeLayout>
 </RelativeLayout>

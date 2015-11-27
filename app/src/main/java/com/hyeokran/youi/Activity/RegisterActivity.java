@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.hyeokran.youi.R;
 
@@ -39,7 +40,7 @@ public class RegisterActivity extends AppCompatActivity {
                 if (checkValidInput()) {
                     /* Do Register */
                 } else {
-                    /* 에러 발생 메세지를 보여줌 */
+                    Toast.makeText(getApplicationContext(), "모두 입력해주세요!", Toast.LENGTH_SHORT).show();
                 }
             }
         });

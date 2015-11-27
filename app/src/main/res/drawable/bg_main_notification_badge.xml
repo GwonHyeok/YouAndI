@@ -7,4 +7,6 @@
         android:height="8dp" />
 
     <solid android:color="@color/colorPrimary" />
+    <stroke android:color="@android:color/white"
+            android:width="0.7dp"/>
 </shape>

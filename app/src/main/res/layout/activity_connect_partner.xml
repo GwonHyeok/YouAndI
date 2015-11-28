@@ -19,7 +19,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="0.7"/>
+            android:layout_weight="0.6"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -78,7 +78,7 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_marginBottom="25dp"
+                android:layout_marginBottom="18dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginTop="25dp"
@@ -92,6 +92,7 @@
                 android:lineSpacingExtra="4dp"
                 android:lines="2"
                 android:text="이메일은 두 분을 연결하기 위해 필요합니다. \n정확히 입력했는지 확인해주세요."
+                android:paddingBottom="10dp"
                 android:textColor="#ffffff" />
         </LinearLayout>
     </LinearLayout>

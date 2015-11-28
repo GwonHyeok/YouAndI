@@ -6,34 +6,42 @@
     android:foreground="?android:attr/selectableItemBackground"
     android:orientation="vertical">
 
+    <!-- 배경영역 -->
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/colorPrimary" />
 
+    <!-- 디데이 플러스 -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
-        android:layout_marginLeft="10dp"
-        android:layout_marginStart="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
         android:text="+298일"
         android:textColor="@android:color/white"
         android:textSize="16sp" />
 
+    <!-- 컨텐츠 텍스트 -->
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:gravity="center"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:paddingLeft="20dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="2015.11.12 금요일"
             android:textColor="@android:color/white"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            android:shadowColor="#000000"
+            android:shadowDx="2.0"
+            android:shadowDy="2.0"
+            android:shadowRadius="2.0"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -44,12 +52,14 @@
             android:textSize="18sp" />
     </LinearLayout>
 
+    <!-- 더보기 -->
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
         android:rotation="180"
         android:src="@drawable/ic_arrow" />
 </RelativeLayout>

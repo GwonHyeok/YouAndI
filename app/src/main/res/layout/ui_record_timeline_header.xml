@@ -5,7 +5,7 @@
     android:orientation="horizontal">
 
     <!-- 프로필 이미지 -->
-    <ImageView
+    <com.hyeokran.youi.CustomView.CircleImageView
         android:layout_width="62dp"
         android:layout_height="62dp"
         android:src="@drawable/ic_profile" />

@@ -18,8 +18,6 @@ import com.hyeokran.youi.R;
 public class RecordMainFragment extends Fragment {
     private static RecordMainFragment instance = null;
 
-    private RecordPagerAdapter mPagerAdapter;
-
     public synchronized static RecordMainFragment getInstance() {
         if (instance == null) {
             instance = new RecordMainFragment();
@@ -37,7 +35,7 @@ public class RecordMainFragment extends Fragment {
     public void onViewCreated(View view, Bundle savedInstanceState) {
         /* ViewPager Setup */
         ViewPager viewPager = (ViewPager) view.findViewById(R.id.content_record_viewpager);
-        viewPager.setAdapter(mPagerAdapter = new RecordPagerAdapter(getFragmentManager()));
+        viewPager.setAdapter(new RecordPagerAdapter(getChildFragmentManager()));
 
         /* TabLayout Setup */
         TabLayout mTabLayout = (TabLayout) view.findViewById(R.id.content_record_tablayout);

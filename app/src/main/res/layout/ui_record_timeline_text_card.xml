@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/ui_record_timeline_header" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:paddingTop="10dp"
+        android:text="우아아 짐데이 커머스에 자브라 제품을 팔고 있는데
+        더크라이 그라운드 후원을 자브라에서 한다고 초청권이 왔다 우란이랑 놀러간다오오~~" />
+
+    <include layout="@layout/ui_record_timeline_footer" />
+</LinearLayout>

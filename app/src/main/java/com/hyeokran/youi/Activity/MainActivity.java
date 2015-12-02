@@ -2,11 +2,14 @@ package com.hyeokran.youi.Activity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Debug;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 
+import com.hyeokran.youi.Fragment.CalendarFragment;
 import com.hyeokran.youi.Fragment.MainFragment;
 import com.hyeokran.youi.Fragment.RecordMainFragment;
 import com.hyeokran.youi.R;
@@ -57,6 +60,10 @@ public class MainActivity extends AppCompatActivity {
 
             case R.id.main_tab_record:
                 changeContainer(RecordMainFragment.getInstance());
+                break;
+
+            case R.id.main_tab_calendar:
+                changeContainer(CalendarFragment.getInstance());
                 break;
         }
     }

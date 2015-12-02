@@ -43,9 +43,11 @@
                         <com.hyeokran.youi.CustomView.CircleImageView
                             android:layout_width="64dp"
                             android:layout_height="64dp"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginTop="12dp"
                             android:src="@drawable/ic_user"
                             app:border_color="@android:color/white"
-                            app:border_width="1dp" />
+                            app:border_width="3dp" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -64,6 +66,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
                             android:text="서로 사랑한지"
                             android:textColor="#ffffff"
                             android:textSize="19dp" />
@@ -75,7 +78,7 @@
                             android:layout_marginRight="25dp"
                             android:text="303일"
                             android:textColor="#ffffff"
-                            android:textSize="50dp"
+                            android:textSize="42dp"
                             android:textStyle="bold" />
                     </LinearLayout>
 
@@ -88,9 +91,11 @@
                         <com.hyeokran.youi.CustomView.CircleImageView
                             android:layout_width="64dp"
                             android:layout_height="64dp"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginTop="12dp"
                             android:src="@drawable/ic_user"
                             app:border_color="@android:color/white"
-                            app:border_width="1dp" />
+                            app:border_width="3dp" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -105,21 +110,25 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#FFCCCCCC"
+                android:background="#eeeeee"
                 android:orientation="vertical">
 
                 <!-- 기념일 카드 -->
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="65dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="13dp"
                     android:background="@android:color/white">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
                         android:padding="4dp"
-                        android:text="기념일" />
+                        android:text="기념일"
+                        android:textColor="#656262"
+                        android:textSize="12dp" />
+
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -128,17 +137,40 @@
                         android:gravity="center"
                         android:orientation="vertical">
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="400일" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="5dp"
-                            android:text="97일 전" />
+                            android:layout_marginBottom="5dp"
+                            android:text="400일"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="4dp"
+                                    android:text="97일 전"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textSize="10dp" />
+                            </LinearLayout>
+                        </LinearLayout>
                     </LinearLayout>
+
+
                 </RelativeLayout>
 
                 <!-- 일정 카드 -->
@@ -146,14 +178,17 @@
                     android:layout_width="match_parent"
                     android:layout_height="65dp"
                     android:layout_marginBottom="10dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="13dp"
                     android:background="@android:color/white">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
                         android:padding="4dp"
-                        android:text="일정" />
+                        android:text="일정"
+                        android:textColor="#656262"
+                        android:textSize="12dp" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -162,32 +197,84 @@
                         android:gravity="center"
                         android:orientation="vertical">
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="400일" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="5dp"
-                            android:text="97일 전" />
+                            android:layout_marginBottom="5dp"
+                            android:text="고기먹는 날~~ ^^"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/ic_location" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="4dp"
+                                    android:layout_marginRight="7dp"
+                                    android:text="수원역"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textSize="10dp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/ic_time" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="4dp"
+                                    android:text="12:10pm"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textSize="10dp" />
+                            </LinearLayout>
+                        </LinearLayout>
                     </LinearLayout>
+
+
                 </RelativeLayout>
 
 
-                <!-- 최근 개시물 -->
+                <!-- 최근 게시물 -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:background="#ffffff"
+                    android:orientation="vertical"
+                    android:layout_marginTop="3dp">
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
                         android:background="@android:color/white"
-                        android:paddingLeft="5dp"
-                        android:text="최근 개시물" />
+                        android:padding="4dp"
+                        android:text="최근 게시물"
+                        android:textColor="#656262"
+                        android:textSize="12dp" />
 
                     <LinearLayout
                         android:layout_width="match_parent"

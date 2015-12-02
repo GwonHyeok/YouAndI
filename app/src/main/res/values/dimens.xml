@@ -5,4 +5,7 @@
     <dimen name="fab_margin">16dp</dimen>
 
     <dimen name="content_calendar_day_padding">10dp</dimen>
+
+    <dimen name="content_notification_list_top_padding">15dp</dimen>
+    <dimen name="content_notification_list_bottom_padding">2dp</dimen>
 </resources>

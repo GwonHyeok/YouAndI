@@ -7,6 +7,7 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 
 import com.hyeokran.youi.Adapter.NotificationListAdapter;
+import com.hyeokran.youi.Adapter.NotificationListItemDecoration;
 import com.hyeokran.youi.R;
 
 /**
@@ -27,6 +28,7 @@ public class NotificationActivity extends AppCompatActivity {
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.notification_recyclerview);
         recyclerView.setAdapter(new NotificationListAdapter());
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.addItemDecoration(new NotificationListItemDecoration());
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);

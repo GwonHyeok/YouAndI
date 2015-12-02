@@ -6,8 +6,8 @@
 
     <!-- 프로필 이미지 -->
     <com.hyeokran.youi.CustomView.CircleImageView
-        android:layout_width="62dp"
-        android:layout_height="62dp"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
         android:src="@drawable/ic_profile" />
 
     <!-- 제목, 닉네임 글 날짜 정보 -->

@@ -5,7 +5,7 @@
     android:background="#ffffff"
     android:clickable="true"
     android:foreground="?android:attr/selectableItemBackground"
-    android:orientation="vertical">
+    android:orientation="vertical" >
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -52,8 +52,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="15dp"
-                    android:layout_marginTop="5dp"
-                    android:text="1일 전" />
+                    android:layout_marginTop="3dp"
+                    android:textColor="#929292"
+                    android:text="1일 전"
+                    android:textSize="10dp"/>
 
             </LinearLayout>
         </LinearLayout>

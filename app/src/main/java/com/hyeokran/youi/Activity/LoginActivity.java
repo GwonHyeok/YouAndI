@@ -2,20 +2,21 @@ package com.hyeokran.youi.Activity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.hyeokran.youi.CustomView.HeartProgressView;
 import com.hyeokran.youi.R;
+import com.hyeokran.youi.Util.UserDataPreferenceManager;
+import com.hyeokran.youi.network.NetworkResponseInterface;
+import com.hyeokran.youi.network.api.LoginApi;
 
 /**
  * 로그인 액티비티
  * Created by uran on 15. 11. 15..
  */
-public class LoginActivity extends AppCompatActivity {
+public class LoginActivity extends BaseToolbarActivity {
     /* 이메일 EditText, 비밀번호 EditText */
     private EditText mEmailEditText, mPwdEditText;
 
@@ -25,12 +26,16 @@ public class LoginActivity extends AppCompatActivity {
     /* 회원가입 버튼 */
     private View mSignupView;
 
+    /* 로그인 API */
+    private LoginApi mLoginApi;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
         viewInit();
+        networkInit();
 
         setUpSignInButton();
         setUpSignUpButton();
@@ -44,6 +49,19 @@ public class LoginActivity extends AppCompatActivity {
         mSignupView = findViewById(R.id.login_signup_button);
     }
 
+    private void networkInit() {
+        mLoginApi = new LoginApi(this);
+        mLoginApi.setNetworkResponseInterface(new NetworkResponseInterface() {
+            @Override
+            public void getNetworkData(String apiName, String errorMsg, int code) {
+                UserDataPreferenceManager.getInstance().setToken("YOU_AND_I_TEMP_TOKEN_IS_DEBUG_MODE");
+                finish();
+                startActivity(new Intent(getApplicationContext(), SplashActivity.class));
+
+            }
+        });
+    }
+
     /* 로그인 버튼 설정 */
     private void setUpSignInButton() {
         /* 로그인 버튼 눌렀을떄 작동 */
@@ -55,8 +73,7 @@ public class LoginActivity extends AppCompatActivity {
                      * 로그인 하는 작업을 실행한다
                      * 아직 네트워크 연결 부분을 추가 하지 않음
                      */
-                    HeartProgressView heartProgressView = new HeartProgressView(v.getContext());
-                    heartProgressView.show();
+                    mLoginApi.startConnection();
                 } else {
                     /*
                      * Something Wrong !!

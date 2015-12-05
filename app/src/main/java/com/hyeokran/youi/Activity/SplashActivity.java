@@ -16,7 +16,7 @@ public class SplashActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        if (UserDataPreferenceManager.getInstance().getToken() != null) {
+        if (UserDataPreferenceManager.getInstance().getToken() == null) {
             startActivity(new Intent(this, LoginActivity.class));
         } else {
             startActivity(new Intent(this, MainActivity.class));

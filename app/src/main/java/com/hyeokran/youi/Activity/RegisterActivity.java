@@ -1,22 +1,25 @@
 package com.hyeokran.youi.Activity;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
 import com.hyeokran.youi.R;
+import com.hyeokran.youi.network.NetworkResponseInterface;
+import com.hyeokran.youi.network.api.RegisterApi;
 
 /**
  * 회원 가입 액티비티
  * Created by GwonHyeok on 2015. 11. 26..
  */
-public class RegisterActivity extends AppCompatActivity {
+public class RegisterActivity extends BaseToolbarActivity {
 
     private EditText mNameEditText, mMailEditText, mPwdEditText;
     private Button mSubmitButon;
+
+    private RegisterApi mRegisterApi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +27,7 @@ public class RegisterActivity extends AppCompatActivity {
         setContentView(R.layout.activity_register);
 
         viewInit();
+        networkInit();
     }
 
     /* View 초기화 */
@@ -39,9 +43,21 @@ public class RegisterActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (checkValidInput()) {
                     /* Do Register */
+                    mRegisterApi.startConnection();
                 } else {
                     Toast.makeText(getApplicationContext(), "모두 입력해주세요!", Toast.LENGTH_SHORT).show();
                 }
+            }
+        });
+    }
+
+    private void networkInit() {
+        mRegisterApi = new RegisterApi(this);
+        mRegisterApi.setNetworkResponseInterface(new NetworkResponseInterface() {
+            @Override
+            public void getNetworkData(String apiName, String errorMsg, int code) {
+                /* Register 결과 콜백 */
+                finish();
             }
         });
     }

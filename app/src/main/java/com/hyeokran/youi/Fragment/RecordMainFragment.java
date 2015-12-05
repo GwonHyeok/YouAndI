@@ -10,7 +10,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.hyeokran.youi.Activity.NotificationActivity;
 import com.hyeokran.youi.Activity.WriteRecordActivity;
 import com.hyeokran.youi.Adapter.RecordPagerAdapter;
 import com.hyeokran.youi.R;

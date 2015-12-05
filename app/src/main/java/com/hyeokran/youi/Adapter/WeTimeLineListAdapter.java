@@ -15,7 +15,7 @@ public class WeTimeLineListAdapter extends RecyclerView.Adapter<WeTimeLineListVi
 
     @Override
     public WeTimeLineListViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.ui_record_timeline_text_card, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.ui_we_timeline_text_card, parent, false);
         return new WeTimeLineListViewHolder(view);
     }
 

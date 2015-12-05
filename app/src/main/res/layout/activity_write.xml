@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="#fff">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
@@ -12,6 +13,7 @@
         android:background="@color/colorPrimary">
 
         <ImageView
+            android:id="@+id/write_back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_arrow" />
@@ -60,6 +62,7 @@
                 android:textStyle="bold" />
 
             <ImageView
+                android:id="@+id/write_change_range_icon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
@@ -67,6 +70,7 @@
                 android:src="@drawable/ic_rocked_blue" />
 
             <TextView
+                android:id="@+id/write_private_mode_change"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
@@ -147,18 +151,20 @@
                 android:background="#cccccc" />
 
             <ImageView
+                android:id="@+id/write_select_photo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="15dp"
                 android:src="@drawable/ic_carmera" />
 
             <TextView
+                android:id="@+id/write_change_date"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
-                android:textSize="12sp"
                 android:padding="15dp"
-                android:text="2015.12.12 (수)" />
+                android:text="2015.12.12 (수)"
+                android:textSize="12sp" />
         </RelativeLayout>
     </RelativeLayout>
 </LinearLayout>

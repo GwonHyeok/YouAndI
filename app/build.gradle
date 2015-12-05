@@ -6,7 +6,7 @@ android {
 
     defaultConfig {
         applicationId "com.hyeokran.youi"
-        minSdkVersion 14
+        minSdkVersion 15
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"
@@ -26,4 +26,6 @@ dependencies {
     compile 'com.android.support:design:23.1.1'
     compile 'com.github.nirhart:parallaxscroll:1.0'
     compile 'com.squareup.okhttp:okhttp:2.5.0'
+    compile 'com.sangcomz:FishBun:0.1.5@aar'
+    compile 'com.github.bumptech.glide:glide:3.6.1'
 }

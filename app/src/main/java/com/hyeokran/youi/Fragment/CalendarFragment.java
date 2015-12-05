@@ -7,7 +7,6 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TableLayout;
 import android.widget.TableRow;
@@ -94,7 +93,7 @@ public class CalendarFragment extends Fragment {
         btn.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
-                android.util.Log.d("클릭","onClick()");
+                android.util.Log.d("클릭", "onClick()");
 
                 iMonth--;
                 if (iMonth <= 0) {
@@ -125,14 +124,21 @@ public class CalendarFragment extends Fragment {
 
         // calendar 객체 생성
         Calendar calendar = Calendar.getInstance();
+
+        int currentYear = calendar.get(Calendar.YEAR);
+        int currentMonth = calendar.get(Calendar.MONTH);
+        int currentDay = calendar.get(Calendar.DAY_OF_MONTH);
+
+
         // 날짜 세팅
         calendar.set(Calendar.YEAR, year);
         calendar.set(Calendar.MONTH, month);
+
         // 1일의 요일을 구하기 위하여 현재 날짜를 1로 설정함
         calendar.set(Calendar.DAY_OF_MONTH, 1);
 
         // 날짜를 출력
-        today.setText(year + " " + (month+1) + "월");
+        today.setText(year + " " + (month + 1) + "월");
 
         // 요일을 구함
         int whatDay = calendar.get(Calendar.DAY_OF_WEEK);
@@ -141,12 +147,20 @@ public class CalendarFragment extends Fragment {
 
         // 기존에 적혀있던 텍스트 모두 초기화
         for (int i = 0; i < list.size(); i++) {
+            list.get(i).setBackgroundColor(getResources().getColor(android.R.color.white));
             list.get(i).setText("");
         }
 
         // 날짜를 세팅함
         for (int i = whatDay - 1; i < calendar.getActualMaximum(Calendar.DAY_OF_MONTH) + whatDay - 1; i++) {
-            list.get(i).setText(j++ + "");
+            list.get(i).setText(String.valueOf(j));
+
+            /* 출력하려는 날이 오늘이라면 배경 색을 바꾼다 */
+            if (currentYear == year && currentMonth == month && currentDay == j) {
+                list.get(i).setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+            }
+
+            j++;
         }
 
     }

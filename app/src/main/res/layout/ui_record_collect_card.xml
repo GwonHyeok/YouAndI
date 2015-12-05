@@ -10,6 +10,7 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:scaleType="centerCrop"
         android:src="@drawable/bg_1" />
 
     <!-- 디데이 플러스 -->
@@ -20,9 +21,9 @@
         android:layout_marginLeft="20dp"
         android:layout_marginStart="20dp"
         android:shadowColor="#595959"
-        android:shadowDx="0"
-        android:shadowDy="0"
-        android:shadowRadius="3"
+        android:shadowDx="2.0"
+        android:shadowDy="2.0"
+        android:shadowRadius="10.0"
         android:text="+298일"
         android:textColor="@android:color/white"
         android:textSize="16sp" />
@@ -37,13 +38,12 @@
         android:paddingLeft="20dp">
 
         <TextView
-
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:shadowColor="#595959"
-            android:shadowDx="0"
-            android:shadowDy="0"
-            android:shadowRadius="3"
+            android:shadowDx="2.0"
+            android:shadowDy="2.0"
+            android:shadowRadius="10.0"
             android:text="2015.11.12 금요일"
             android:textColor="@android:color/white"
             android:textSize="16sp" />
@@ -53,9 +53,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:shadowColor="#595959"
-            android:shadowDx="0"
-            android:shadowDy="0"
-            android:shadowRadius="3"
+            android:shadowDx="2.0"
+            android:shadowDy="2.0"
+            android:shadowRadius="10.0"
             android:text="영화관 데이트 3"
             android:textColor="@android:color/white"
             android:textSize="18sp" />
@@ -71,8 +71,8 @@
         android:layout_marginRight="10dp"
         android:rotation="180"
         android:shadowColor="#595959"
-        android:shadowDx="0"
-        android:shadowDy="0"
-        android:shadowRadius="3"
+        android:shadowDx="2.0"
+        android:shadowDy="2.0"
+        android:shadowRadius="10.0"
         android:src="@drawable/ic_arrow" />
 </RelativeLayout>

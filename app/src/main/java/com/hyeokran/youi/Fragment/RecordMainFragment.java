@@ -20,6 +20,7 @@ import com.hyeokran.youi.R;
  */
 public class RecordMainFragment extends Fragment {
     private static RecordMainFragment instance = null;
+    private FloatingActionButton content_record_fab;
 
     public synchronized static RecordMainFragment getInstance() {
         if (instance == null) {
@@ -39,18 +40,42 @@ public class RecordMainFragment extends Fragment {
     public void onViewCreated(View view, Bundle savedInstanceState) {
         /* ViewPager Setup */
         ViewPager viewPager = (ViewPager) view.findViewById(R.id.content_record_viewpager);
-        viewPager.setAdapter(new RecordPagerAdapter(getChildFragmentManager()));
+        RecordPagerAdapter recordPagerAdapter = new RecordPagerAdapter(getChildFragmentManager());
+        viewPager.setAdapter(recordPagerAdapter);
+        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                switch (position) {
+                    case 0:
+                        content_record_fab.show();
+                        break;
+
+                    case 1:
+                        content_record_fab.hide();
+                        break;
+                }
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
 
         /* TabLayout Setup */
         TabLayout mTabLayout = (TabLayout) view.findViewById(R.id.content_record_tablayout);
         mTabLayout.setupWithViewPager(viewPager);
 
-        FloatingActionButton content_record_fab = (FloatingActionButton) view.findViewById(R.id.content_record_fab);
+        content_record_fab = (FloatingActionButton) view.findViewById(R.id.content_record_fab);
         content_record_fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getContext(), WriteRecordActivity.class));
-
             }
         });
     }

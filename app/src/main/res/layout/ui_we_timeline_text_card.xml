@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include layout="@layout/ui_we_timeline_header" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="37dp"
+            android:lineSpacingExtra="1dp"
+            android:paddingBottom="7dp"
+            android:paddingLeft="21dp"
+            android:paddingRight="30dp"
+            android:paddingTop="63dp"
+            android:text="수원CGV에서 내부자들 봤어요~~ 오랜만의 한국영화 관람이라 신선했어요! 다들 손잡고 보러가셔용 재밌었습니다 @,.@ 다음 영화는 뭐볼지 고민되네요! 최근 영화중에 볼만한거 추천해주세요!"
+            android:textColor="#353535"
+            android:textSize="13sp" />
+    </FrameLayout>
+
+
+    <include layout="@layout/ui_we_timeline_footer" />
+</LinearLayout>

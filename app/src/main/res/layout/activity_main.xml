@@ -2,8 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="#fff">
+    android:background="#fff"
+    android:orientation="vertical">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
@@ -12,11 +12,11 @@
 
         <!-- 알람 뱃지 -->
         <FrameLayout
-            android:paddingTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:paddingBottom="10dp"
             android:paddingRight="10dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:paddingTop="10dp">
 
             <ImageButton
                 android:layout_width="wrap_content"
@@ -110,10 +110,12 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/main_tab_we"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
+            android:onClick="onClickBottomTab"
             android:orientation="vertical">
 
             <ImageView
@@ -153,9 +155,11 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:onClick="onClickBottomTab">
 
             <ImageView
+                android:id="@+id/main_tab_setting"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="10dp"

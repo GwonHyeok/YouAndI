@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <!-- 프로필 이미지 -->
+        <com.hyeokran.youi.CustomView.CircleImageView
+            android:layout_width="37dp"
+            android:layout_height="37dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/ic_profile" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="27dp"
+            android:src="@drawable/ic_heart_red"/>
+
+        <com.hyeokran.youi.CustomView.CircleImageView
+            android:layout_width="37dp"
+            android:layout_height="37dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/ic_profile" />
+
+
+    </LinearLayout>
+
+    <!-- 제목, 닉네임 글 날짜 정보 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="12dp"
+        android:orientation="vertical">
+
+        <!-- 제목 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="영화봤어요!!~ 내부자들 너무 재밌어!! 짱짱"
+            android:textColor="#0d0d0d"
+            android:textSize="13dp"
+            android:textStyle="bold" />
+
+        <!-- 닉네임, 날짜 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <!-- 닉네임 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="7dp"
+                android:text="우란"
+                android:textColor="#25578f"
+                android:textSize="10dp"
+                android:textStyle="bold" />
+
+            <!-- 날짜 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="7dp"
+                android:text="2015.11.01"
+                android:textColor="#929292"
+                android:textSize="10dp" />
+
+            <!-- 글 공개 여부 -->
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="0dp"
+                android:src="@drawable/ic_gobal_gray" />
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

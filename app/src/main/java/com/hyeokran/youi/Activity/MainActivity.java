@@ -12,6 +12,7 @@ import android.view.View;
 import com.hyeokran.youi.Fragment.CalendarFragment;
 import com.hyeokran.youi.Fragment.MainFragment;
 import com.hyeokran.youi.Fragment.RecordMainFragment;
+import com.hyeokran.youi.Fragment.WeFragment;
 import com.hyeokran.youi.R;
 
 public class MainActivity extends AppCompatActivity {
@@ -65,6 +66,9 @@ public class MainActivity extends AppCompatActivity {
             case R.id.main_tab_calendar:
                 changeContainer(CalendarFragment.getInstance());
                 break;
+
+            case R.id.main_tab_we:
+                changeContainer(WeFragment.getInstance());
         }
     }
 

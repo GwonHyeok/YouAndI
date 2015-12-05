@@ -36,5 +36,10 @@
         <activity
             android:name=".Activity.NotificationActivity"
             android:theme="@style/AppTheme" />
+
+        <activity
+            android:name=".Activity.WriteRecordActivity"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
     </application>
 </manifest>

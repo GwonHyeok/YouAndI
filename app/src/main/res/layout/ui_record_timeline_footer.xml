@@ -10,10 +10,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:paddingBottom="5dp"
-        android:paddingLeft="10dp"
+        android:paddingBottom="12dp"
+        android:paddingLeft="23dp"
         android:paddingRight="10dp"
-        android:paddingTop="5dp">
+        android:paddingTop="10dp">
 
         <!-- 좋아요 -->
         <LinearLayout
@@ -23,12 +23,14 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textSize="13dp"
                 android:text="좋아요" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
+                android:textSize="13dp"
+                android:layout_marginLeft="5dp"
                 android:text="38개" />
         </LinearLayout>
 
@@ -36,26 +38,29 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp">
+            android:layout_marginLeft="17dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textSize="13dp"
                 android:text="댓글" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
+                android:textSize="13dp"
+                android:layout_marginLeft="5dp"
                 android:text="38개" />
         </LinearLayout>
     </LinearLayout>
 
     <!-- 줄 구분 -->
     <View
+        android:layout_marginBottom="3dp"
         android:layout_width="match_parent"
         android:layout_height="0.5dp"
-        android:background="#444444" />
+        android:background="#dedede" />
 
     <!-- 좋아요, 댓글달기, 공유하기 버튼 -->
     <LinearLayout
@@ -84,11 +89,14 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_alarm" />
+                    android:src="@drawable/ic_like" />
 
                 <TextView
                     android:layout_width="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="#6e6e6e"
                     android:layout_height="wrap_content"
+                    android:textSize="13dp"
                     android:text="좋아요" />
             </LinearLayout>
         </FrameLayout>
@@ -110,11 +118,14 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_alarm" />
+                    android:src="@drawable/ic_comment" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="#6e6e6e"
+                    android:textSize="13dp"
                     android:text="댓글달기" />
             </LinearLayout>
         </FrameLayout>
@@ -136,18 +147,22 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_alarm" />
+                    android:src="@drawable/ic_share" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="#6e6e6e"
+                    android:textSize="13dp"
                     android:text="공유하기" />
             </LinearLayout>
         </FrameLayout>
     </LinearLayout>
     <!-- 줄 구분 -->
     <View
+        android:layout_marginTop="3dp"
         android:layout_width="match_parent"
         android:layout_height="0.5dp"
-        android:background="#444444" />
+        android:background="#dedede" />
 </LinearLayout>

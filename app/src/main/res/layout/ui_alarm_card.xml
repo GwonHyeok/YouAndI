@@ -10,16 +10,16 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="70dp"
-        android:layout_marginTop="4dp">
+        android:layout_marginTop="0dp">
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="15dp">
+            android:layout_margin="12dp">
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="37dp"
+                android:layout_height="37dp"
                 android:layout_gravity="center_vertical"
                 android:src="@drawable/ic_profile" />
 
@@ -38,12 +38,14 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="15dp"
                         android:text="우란이"
+                        android:textSize="13dp"
                         android:textColor="#fc8585"
                         android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textSize="13dp"
                         android:text=" 님이 ~~!@@#@@ 했습니다." />
 
                 </LinearLayout>

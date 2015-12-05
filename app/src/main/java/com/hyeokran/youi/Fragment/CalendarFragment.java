@@ -50,7 +50,7 @@ public class CalendarFragment extends Fragment {
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
 
-        // «ˆ¿Á ≥‚∞˙ ø˘¿ª ±∏«‘
+        // 현재 연도와 월을 구함
         Calendar calendar = Calendar.getInstance();
         iYear = calendar.get(Calendar.YEAR);
         iMonth = calendar.get(Calendar.MONTH);
@@ -61,7 +61,7 @@ public class CalendarFragment extends Fragment {
 
         int padding = getResources().getDimensionPixelOffset(R.dimen.content_calendar_day_padding);
 
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 6; i++) {
             TableRow tr = new TableRow(getContext());
             for (int j = 0; j < 7; j++) {
                 TextView tv = new TextView(getContext());
@@ -94,6 +94,7 @@ public class CalendarFragment extends Fragment {
         btn.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
+                android.util.Log.d("클릭","onClick()");
 
                 iMonth--;
                 if (iMonth <= 0) {
@@ -122,28 +123,28 @@ public class CalendarFragment extends Fragment {
 
     private void setCalendar(int year, int month) {
 
-        // calendar ∞¥√º ª˝
+        // calendar 객체 생성
         Calendar calendar = Calendar.getInstance();
-        // ≥Ø¿⁄ º¬∆√
+        // 날짜 세팅
         calendar.set(Calendar.YEAR, year);
         calendar.set(Calendar.MONTH, month);
-        // 1¿œ¿« ø‰¿œ¿ª ±∏«œ±‚ ¿ß«ÿ «ˆ¿Á ≥Ø¬•∏¶ 1¿œ∑Œ º≥
+        // 1일의 요일을 구하기 위하여 현재 날짜를 1로 설정함
         calendar.set(Calendar.DAY_OF_MONTH, 1);
 
-        // ≥Ø¬•∏¶ √‚∑¬
-        today.setText(year + " " + (month + 1) + "월");
+        // 날짜를 출력
+        today.setText(year + " " + (month+1) + "월");
 
-        // ø‰¿œ¿ª ±∏«‘ whatDay ø°¥¬ ø‰¿œ¿Ã µÈæÓ
+        // 요일을 구함
         int whatDay = calendar.get(Calendar.DAY_OF_WEEK);
-        // j ∫Øºˆ¥¬ 1∫Œ≈Õ ¡ı∞°«œ∏Èº≠ ¿œ¿ª √‚∑¬
+        // j는 1씩 증가하면서 요일을 출력함
         int j = 1;
 
-        // ±‚¡∏ø° ¿˚«Ù¿÷¥¯ ≈ÿΩ∫∆Æ ∏µŒ √ ±‚»≠
+        // 기존에 적혀있던 텍스트 모두 초기화
         for (int i = 0; i < list.size(); i++) {
             list.get(i).setText("");
         }
 
-        // ≥Ø¬•∏¶ º¬«‘
+        // 날짜를 세팅함
         for (int i = whatDay - 1; i < calendar.getActualMaximum(Calendar.DAY_OF_MONTH) + whatDay - 1; i++) {
             list.get(i).setText(j++ + "");
         }

@@ -12,7 +12,7 @@ import com.hyeokran.youi.Fragment.RecordTimeLineFragment;
  * Created by GwonHyeok on 2015. 11. 27..
  */
 public class RecordPagerAdapter extends FragmentPagerAdapter {
-    private String TITLES[] = {"타임라인", "바로보기"};
+    private String TITLES[] = {"타임라인", "모아보기"};
 
     public RecordPagerAdapter(FragmentManager fm) {
         super(fm);

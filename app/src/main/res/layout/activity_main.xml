@@ -43,13 +43,13 @@
             android:src="@drawable/ic_logo_main" />
     </android.support.v7.widget.Toolbar>
 
+
     <FrameLayout
         android:id="@+id/main_content_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@+id/main_tab_layout"
-        android:layout_below="@+id/toolbar"
-        android:background="#eeeeee"/>
+        android:layout_below="@+id/toolbar" />
 
     <LinearLayout
         android:id="@+id/main_tab_layout"

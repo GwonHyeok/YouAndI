@@ -6,8 +6,9 @@
 
     <!-- 프로필 이미지 -->
     <com.hyeokran.youi.CustomView.CircleImageView
-        android:layout_width="45dp"
-        android:layout_height="45dp"
+        android:layout_width="37dp"
+        android:layout_height="37dp"
+        android:layout_margin="12dp"
         android:src="@drawable/ic_profile" />
 
     <!-- 제목, 닉네임 글 날짜 정보 -->
@@ -21,7 +22,11 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="더크라이그라운드 보려가요오오~" />
+            android:text="더크라이그라운드 보려가요오오~"
+            android:layout_marginBottom="5dp"
+            android:textColor="#0d0d0d"
+            android:textSize="13dp"
+            android:textStyle="bold" />
 
         <!-- 닉네임, 날짜 -->
         <LinearLayout
@@ -33,19 +38,28 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="혁이" />
+                android:layout_marginRight="7dp"
+                android:text="혁이"
+                android:textColor="#25578f"
+                android:textSize="10dp"
+                android:textStyle="bold" />
 
             <!-- 날짜 -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="2015.11.01" />
+                android:layout_marginRight="7dp"
+                android:text="2015.11.01"
+                android:textSize="10dp"
+                android:textColor="#929292" />
 
             <!-- 글 공개 여부 -->
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_user" />
+                android:src="@drawable/ic_rocked"
+                android:layout_marginBottom="0dp"/>
+
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

@@ -8,4 +8,8 @@
 
     <dimen name="content_notification_list_top_padding">15dp</dimen>
     <dimen name="content_notification_list_bottom_padding">2dp</dimen>
+
+    <dimen name="write_photo_thumbnail_width">60dp</dimen>
+    <dimen name="write_photo_thumbnail_height">60dp</dimen>
+    <dimen name="write_photo_thumbnail_padding">4dp</dimen>
 </resources>

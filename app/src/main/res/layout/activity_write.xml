@@ -3,8 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="#fff">
+    android:background="#fff"
+    android:orientation="vertical">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
@@ -111,6 +111,7 @@
                 android:layout_marginRight="15dp"
                 android:layout_marginTop="40dp"
                 android:hint="제목"
+                android:maxLines="1"
                 android:textSize="12sp"
                 app:backgroundTint="@android:color/transparent" />
 
@@ -136,12 +137,26 @@
                 android:textSize="12sp" />
         </LinearLayout>
 
-        <RelativeLayout
+        <LinearLayout
             android:id="@+id/write_add_photo_root"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:background="#f8f8f8">
+            android:background="#f8f8f8"
+            android:orientation="vertical">
+
+            <HorizontalScrollView
+                android:id="@+id/write_photo_scrollview"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@android:color/white">
+
+                <LinearLayout
+                    android:id="@+id/write_photo_root"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal" />
+            </HorizontalScrollView>
 
             <!-- 줄 구분 -->
             <View
@@ -150,21 +165,26 @@
                 android:layout_marginTop="0dp"
                 android:background="#cccccc" />
 
-            <ImageView
-                android:id="@+id/write_select_photo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="15dp"
-                android:src="@drawable/ic_carmera" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-            <TextView
-                android:id="@+id/write_change_date"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:padding="15dp"
-                android:text="2015.12.12 (수)"
-                android:textSize="12sp" />
-        </RelativeLayout>
+                <ImageView
+                    android:id="@+id/write_select_photo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:src="@drawable/ic_carmera" />
+
+                <TextView
+                    android:id="@+id/write_change_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:padding="15dp"
+                    android:text="2015.12.12 (수)"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+        </LinearLayout>
     </RelativeLayout>
 </LinearLayout>

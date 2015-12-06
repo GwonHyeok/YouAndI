@@ -278,6 +278,7 @@
                         android:textSize="12dp" />
 
                     <LinearLayout
+                        android:id="@+id/content_main_record_collect_root"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">

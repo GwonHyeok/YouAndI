@@ -12,6 +12,7 @@ import com.hyeokran.youi.R;
  * Created by GwonHyeok on 2015. 11. 27..
  */
 public class RecordCollectListAdapter extends RecyclerView.Adapter<RecordCollectListViewHolder> {
+    private int resIds[] = {R.drawable.bg_1, R.drawable.bg_2, R.drawable.bg_3, R.drawable.bg_4};
 
     @Override
     public RecordCollectListViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -21,7 +22,7 @@ public class RecordCollectListAdapter extends RecyclerView.Adapter<RecordCollect
 
     @Override
     public void onBindViewHolder(RecordCollectListViewHolder holder, int position) {
-
+        holder.backgroundView.setImageResource(resIds[position % 4]);
     }
 
     @Override

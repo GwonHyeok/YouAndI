@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.DatePicker;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.hyeokran.youi.R;
@@ -64,6 +65,8 @@ public class MainFragment extends Fragment {
                 }, year, month, day).show();
             }
         });
+
+        setDummyCollectionData(view);
     }
 
     /**
@@ -81,5 +84,20 @@ public class MainFragment extends Fragment {
         dDay += 1; // 1일부터 시작일 경우 1추가
 
         mTopDDayTextView.setText(String.valueOf(dDay));
+    }
+
+    /**
+     * 글 임시 데이터 적용
+     */
+    private void setDummyCollectionData(View view) {
+        ViewGroup viewGroup = (ViewGroup) view.findViewById(R.id.content_main_record_collect_root);
+
+        int resIds[] = {R.drawable.bg_1, R.drawable.bg_2, R.drawable.bg_3, R.drawable.bg_4};
+        for (int i = 0; i < viewGroup.getChildCount(); i++) {
+            View childView = viewGroup.getChildAt(i);
+            ImageView imageView = (ImageView) childView.findViewById(R.id.collect_card_background_view);
+
+            imageView.setImageResource(resIds[i]);
+        }
     }
 }

@@ -2,12 +2,12 @@ package com.hyeokran.youi.Activity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Debug;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import com.hyeokran.youi.Fragment.CalendarFragment;
 import com.hyeokran.youi.Fragment.MainFragment;
@@ -19,6 +19,8 @@ public class MainActivity extends AppCompatActivity {
 
     private View containerView;
     private Toolbar mToolbar;
+
+    private ViewGroup tabLayoutGroup;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,12 +34,15 @@ public class MainActivity extends AppCompatActivity {
         this.containerView = findViewById(R.id.main_content_container);
         this.mToolbar = (Toolbar) findViewById(R.id.toolbar);
 
+        this.tabLayoutGroup = (ViewGroup) findViewById(R.id.main_tab_layout);
+
         /* Support ActionBar 설정 */
         setSupportActionBar(this.mToolbar);
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayShowTitleEnabled(false);
         }
 
+        updateTabIconColor(R.id.main_tab_home);
         changeContainer(MainFragment.getInstance());
     }
 
@@ -69,6 +74,35 @@ public class MainActivity extends AppCompatActivity {
 
             case R.id.main_tab_we:
                 changeContainer(WeFragment.getInstance());
+                break;
+        }
+
+        updateTabIconColor(view.getId());
+    }
+
+    private void updateTabIconColor(int clickedId) {
+        /* Reset */
+        for (int i = 0; i < tabLayoutGroup.getChildCount(); i++) {
+            if (tabLayoutGroup.getChildAt(i) instanceof ViewGroup) {
+                ViewGroup tabChildGroup = (ViewGroup) tabLayoutGroup.getChildAt(i);
+                if (tabChildGroup.getChildAt(0) instanceof ImageView) {
+                    ((ImageView) tabChildGroup.getChildAt(0)).clearColorFilter();
+                }
+            }
+        }
+
+        /* Tab We 일 경우에는 색을 변경 하지 않음 */
+        if (clickedId == R.id.main_tab_we) {
+            return;
+        }
+
+        /* Set Color Filter */
+        if (findViewById(clickedId) instanceof ViewGroup) {
+            ViewGroup tabChildGroup = (ViewGroup) findViewById(clickedId);
+
+            if (tabChildGroup.getChildAt(0) instanceof ImageView) {
+                ((ImageView) tabChildGroup.getChildAt(0)).setColorFilter(0xFF5B5B5B);
+            }
         }
     }
 

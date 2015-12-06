@@ -11,6 +11,7 @@ import android.widget.ImageView;
 
 import com.hyeokran.youi.Fragment.CalendarFragment;
 import com.hyeokran.youi.Fragment.MainFragment;
+import com.hyeokran.youi.Fragment.MoreFragment;
 import com.hyeokran.youi.Fragment.RecordMainFragment;
 import com.hyeokran.youi.Fragment.WeFragment;
 import com.hyeokran.youi.R;
@@ -74,6 +75,10 @@ public class MainActivity extends AppCompatActivity {
 
             case R.id.main_tab_we:
                 changeContainer(WeFragment.getInstance());
+                break;
+
+            case R.id.main_tab_more:
+                changeContainer(MoreFragment.getInstance());
                 break;
         }
 

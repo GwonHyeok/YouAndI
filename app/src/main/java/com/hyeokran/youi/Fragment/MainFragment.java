@@ -80,10 +80,10 @@ public class MainFragment extends Fragment {
         int currentTime = (int) ((Calendar.getInstance().getTimeInMillis()) / (24 * 60 * 60 * 1000));
         int startTime = (int) ((dDayDate.getTime()) / (24 * 60 * 60 * 1000));
 
-        int dDay = startTime - currentTime;
+        int dDay = currentTime - startTime;
         dDay += 1; // 1일부터 시작일 경우 1추가
 
-        mTopDDayTextView.setText(String.valueOf(dDay));
+        mTopDDayTextView.setText((String.valueOf(dDay)+"일"));
     }
 
     /**

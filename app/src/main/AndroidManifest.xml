@@ -29,7 +29,7 @@
 
         <activity
             android:name=".Activity.LoginActivity"
-            android:theme="@style/AppTheme.LoginTheme" />
+            android:theme="@style/AppTheme.MainTheme" />
 
         <activity
             android:name=".Activity.RegisterActivity"
